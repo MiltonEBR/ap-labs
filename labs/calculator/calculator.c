@@ -56,7 +56,7 @@ long calc(int operator, int nValues, int *values) {
 
 int* argsToNumArray(char *args[], int n){
 
-    int* nums = malloc(n);
+    int* nums = malloc(n*sizeof(int));
 
     for (int i=0; i<n; i++) {
         nums[i]=atoi(args[2+i]);
@@ -84,9 +84,8 @@ int main(int argc, char *argv[]) {
     }
 
     int *nums = argsToNumArray(argv, argc-2);
-    
     calc(operator,argc-2,nums);
 
 
-    return -1;
+    return 0;
 }
