@@ -7,18 +7,45 @@
 //!+point
 package main
 
-import "math"
+import (
+	"math"
+	"math/rand"
+	"os"
 
-type Point struct{ X, Y float64 }
+	//"fmt"
+	"strconv"
+)
+
+type Point struct{ x, y float64 }
 
 // traditional function
-func Distance(p, q Point) float64 {
-	return math.Hypot(q.X-p.X, q.Y-p.Y)
+// func Distance(p, q Point) float64 {
+// 	return math.Hypot(q.x-p.x, q.y-p.y)
+// }
+
+func (p Point) X() float64 {
+	return p.x
+}
+func (p Point) Y() float64 {
+	return p.y
 }
 
 // same thing, but as a method of the Point type
 func (p Point) Distance(q Point) float64 {
-	return math.Hypot(q.X-p.X, q.Y-p.Y)
+	return math.Hypot(q.X()-p.X(), q.Y()-p.Y())
+}
+
+func GenRandomPoint(rang float64) Point {
+	x, y := rand.Float64()*rang, rand.Float64()*rang
+	if rand.Float32() > 0.5 {
+		x = -x
+	}
+	if rand.Float32() > 0.5 {
+		y = -y
+	}
+
+	return Point{x, y}
+
 }
 
 //!-point
@@ -40,6 +67,7 @@ func (path Path) Distance() float64 {
 }
 
 func main() {
+	sides, err := strconv.Atoi(os.Args[1])
 }
 
 //!-path
