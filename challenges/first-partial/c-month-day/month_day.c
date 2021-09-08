@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
 
     if(argc < 3){
         printf("Please use correct arguments ./month_day <year> <yearday>\n");
-        return -1;
+        return 0;
     }
 
     int month = 0, day = 0;
