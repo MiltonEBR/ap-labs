@@ -1,3 +1,5 @@
+//Milton Eduardo Barroso Ramírez. A01634505.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -67,7 +69,7 @@ int main(int argc, char **argv)
 		strcat(outputFile, fileToRead);
 	}
 
-	printf("%s,%s,%d,%c\n",fileToRead,outputFile,isNumberFile,sortType);
+	// printf("%s,%s,%d,%c\n",fileToRead,outputFile,isNumberFile,sortType);
 	FILE *file;
 
 
@@ -103,7 +105,7 @@ int main(int argc, char **argv)
 	if(sortType=='q'){
 		quicksort((void** )lines, 0, file_len-1, isNumberFile ? compNums : compStrings);
 	}else{
-		//mergesort((void** )lines, 0, file_len-1, isNumberFile ? compNums : compStrings);
+		mergesort((void** )lines, 0, file_len-1, isNumberFile ? compNums : compStrings);
 	}
 	
 	FILE *out = fopen(outputFile, "wb");
