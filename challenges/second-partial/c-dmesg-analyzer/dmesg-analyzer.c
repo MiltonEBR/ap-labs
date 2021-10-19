@@ -59,7 +59,57 @@ struct nlist* add(char* key, char* val){
     return np;
 }
 
+//Helpers
+struct descAndKey{
+    char* key;
+    char* desc;
+};
 
+struct descAndKey descriptionAndKey(char* str){
+    char* timeStamp;
+    int length = 0;
+
+    char* curr = str;
+    while(*curr){
+        length++;
+        curr++;
+        if(*(curr-1)==']') break;
+    }
+    timeStamp = (char*) malloc(length*sizeof(char));
+    strncpy(timeStamp, str, length);
+
+    int keyLength = 0;
+    int trailingS = 0;
+    int colonFound = 0;
+    while(*curr){
+        if(keyLength==0 && *curr==' ') {
+            trailingS++;
+        }else if(colonFound && *curr==' '){
+            break;
+        }else if(*curr==':' && !colonFound){
+            colonFound=1;
+            keyLength++;
+        }else{
+            keyLength++;
+        }
+        curr++;
+
+    }
+    struct descAndKey res;
+    char* tmpKey;
+    tmpKey=(char*) malloc(keyLength*sizeof(char));
+    strncpy(tmpKey,str+trailingS+length,keyLength);
+    res.key=tmpKey;
+
+    char* fullDesc = (char*) malloc(strlen(str)*sizeof(char) - trailingS - keyLength + 1);
+    strcpy(fullDesc, timeStamp);
+    strcat(fullDesc, curr);
+    res.desc=fullDesc;
+
+
+    return res;
+
+}
 
 //Analizer
 void analizeLog(char *logFile, char *report);
@@ -117,14 +167,19 @@ void analizeLog(char *logFile, char *report) {
                 char* lineBuff = (char*) malloc(line_length*sizeof(char));
                 read(file,lineBuff,line_length);
                 lineBuff[strcspn(lineBuff, "\n")] = 0;
-                printf("%s\n",lineBuff);
                 line_length=0;
+                struct descAndKey res = descriptionAndKey(lineBuff);
+                // printf("%s || %s\n",res.key,res.desc);
+                //Hash logic
+                add(res.key,res.desc);
             }else{
                 line_length++;
             }
         }
     } while(bytes_read>0);
 
+    //Iterating through hash
+    
     
 
     printf("Report is generated at: [%s]\n", report);
