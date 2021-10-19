@@ -6,9 +6,11 @@
 #include <fcntl.h> 
 #include <unistd.h>
 
+//Milton Eduardo Barroso Ramírez. A01634505.
+
 #define REPORT_FILE "_report.txt"
 
-#define HASHSIZE 101
+#define HASHSIZE 301
 
 //Hash table implementation
 struct nlist{
@@ -40,11 +42,13 @@ struct nlist* lookup(char *s){
     return NULL;
 }
 
+int dm=0;
 struct nlist* add(char* key, char* val){
     struct nlist* np;
     unsigned hashval;
 
     if( (np=lookup(key) )==NULL){
+        dm++;
         np = (struct nlist* ) malloc(sizeof(*np));
         if(np == NULL || (np->key = strdup(key))==NULL) return NULL;
 
@@ -66,6 +70,9 @@ struct descAndKey{
 };
 
 struct descAndKey descriptionAndKey(char* str){
+
+    struct descAndKey res;
+
     char* timeStamp;
     int length = 0;
 
@@ -75,6 +82,12 @@ struct descAndKey descriptionAndKey(char* str){
         curr++;
         if(*(curr-1)==']') break;
     }
+    if(length<1){
+        res.key="General:";
+        res.desc= (char*) malloc(strlen(str)*sizeof(char)+1);
+        strcpy(res.desc, str);
+        return res;
+    };
     timeStamp = (char*) malloc(length*sizeof(char));
     strncpy(timeStamp, str, length);
 
@@ -95,17 +108,24 @@ struct descAndKey descriptionAndKey(char* str){
         curr++;
 
     }
-    struct descAndKey res;
+
     char* tmpKey;
-    tmpKey=(char*) malloc(keyLength*sizeof(char));
-    strncpy(tmpKey,str+trailingS+length,keyLength);
+    char* fullDesc;
+    if(colonFound){
+        tmpKey=(char*) malloc(keyLength*sizeof(char));
+        strncpy(tmpKey,str+trailingS+length,keyLength);
+
+        fullDesc = (char*) malloc(strlen(str)*sizeof(char) - trailingS - keyLength + 1);
+        strcpy(fullDesc, timeStamp);
+        strcat(fullDesc, curr);
+    }else{
+        tmpKey = (char*) malloc(strlen("General:")*sizeof(char)+1);
+        strcpy(tmpKey, "General:");
+        fullDesc = (char*) malloc(strlen(str)*sizeof(char)+1);
+        strcpy(fullDesc, str);
+    }
     res.key=tmpKey;
-
-    char* fullDesc = (char*) malloc(strlen(str)*sizeof(char) - trailingS - keyLength + 1);
-    strcpy(fullDesc, timeStamp);
-    strcat(fullDesc, curr);
     res.desc=fullDesc;
-
 
     return res;
 
@@ -162,6 +182,7 @@ void analizeLog(char *logFile, char *report) {
         bytes_read = read(file, &buff, 1);
         if(bytes_read>0){
             if(buff =='\n'){
+                if(line_length<1) continue;
                 line_length++;
                 lseek(file,-line_length,SEEK_CUR);
                 char* lineBuff = (char*) malloc(line_length*sizeof(char));
@@ -169,8 +190,6 @@ void analizeLog(char *logFile, char *report) {
                 lineBuff[strcspn(lineBuff, "\n")] = 0;
                 line_length=0;
                 struct descAndKey res = descriptionAndKey(lineBuff);
-                // printf("%s || %s\n",res.key,res.desc);
-                //Hash logic
                 add(res.key,res.desc);
             }else{
                 line_length++;
@@ -178,9 +197,28 @@ void analizeLog(char *logFile, char *report) {
         }
     } while(bytes_read>0);
 
-    //Iterating through hash
-    
-    
+    close(file);
+    //Iterating through hash to write
+    FILE* output = fopen(report, "w+");
+    struct nlist* head;
+
+
+    int am=0;
+    for (int i=0; i<=HASHSIZE; i++) {
+        head=hashtab[i];
+        if(head==NULL) continue;
+        am++;
+        fputs(head->key, output);
+        fputs("\n", output);
+        struct nlist* curr;
+        for (curr=head; curr!=NULL; curr=curr->next) {
+            fputs("    ", output);
+            fputs(curr->val, output);
+            fputs("\n", output);
+        }   
+    }
+    fclose(output);
+    printf("%d vs %d\n",dm,am);//Hoe many keys are bveing lost
 
     printf("Report is generated at: [%s]\n", report);
 }

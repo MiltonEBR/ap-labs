@@ -1,0 +1,448 @@
+pci 0000:00:1f.3:
+    [  +0.000088] PME# supported from D3hot D3cold
+acpi PNP0C14:04:
+    [  +0.000182] duplicate WMI GUID 05901221-D566-11D1-B2F0-00A0C9062910 (first instance was on PNP0C14:02)
+i801_smbus 0000:00:1f.4:1
+    [  +0.000011] SMBus using PCI interrupt
+    [  +0.000178] Microcode Update Driver: v2.2.
+nvme0n1:
+    [  +0.000944] p1 p2
+    [  +0.000011] 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+intel-lpss 0000:00:15.0:A
+    [  +0.000736] enabling device (0004 -> 0006)
+loop2:
+    [  +0.032632] detected capacity change from 0 to 203656
+    [  +0.000075] 131072 (order: 8, 1048576 bytes, linear)
+    [  +0.000050] Default domain type: Translated
+AppArmor:
+    [  +0.000003] AppArmor sha1 policy hashing enabled
+    [  +0.000018] Enabling HDA controller
+rfkill:
+    [  +0.273146] input handler disabled
+    [  +0.000230] 4 ports detected
+usb 1-6.2.4.1:
+    [  +0.000002] Manufacturer: Logitech
+    [  +0.000254] 4 ports detected
+    [  +0.000110] setting tx_max = 16384
+pcieport 0000:00:1d.0:
+    [  +0.000001] DPC: error containment capabilities: Int Msg #0, RPExt+ PoisonedTLP+ SwTrigger+ RP PIO Log 4, DL_ActiveErr+
+NET:
+    [  +0.005842] Registered protocol family 38
+    [  +0.000001] reserve RAM buffer [mem 0x45e000000-0x45fffffff]
+tpm_tis MSFT0101:00:
+    [  +0.015279] 2.0 TPM (device-id 0xFC, rev-id 1)
+RAS:
+    [  +0.000368] Correctable Errors collector initialized.
+    [  +0.000003] PNP: PS/2 appears to have AUX port disabled, if this is incorrect please boot with i8042.nopnp
+    [  +0.000006] EHCI PCI platform driver
+hid-generic 0003:1B3F:2019.0009:
+    [  +0.059883] input,hidraw6: USB HID v2.01 Device [MUSIC-BOOST USB Microphone] on usb-0000:00:14.0-6.2.4.3/input3
+    [  +0.000643] 1eb41faa13c76e3515c5d31902a2dea6fce62d74'
+    [  +0.000171] PME: Signaling with IRQ 122
+blacklist:
+    [  +0.000001] Loading compiled-in revocation X.509 certificates
+    [  +0.000060] BAR 0: assigned [mem 0xc4325000-0xc4325fff 64bit]
+VBoxNetFlt:
+    [  +0.010171] Successfully started.
+pci 0000:00:1f.4:
+    [  +0.000029] reg 0x20: [io  0xefa0-0xefbf]
+TCP:
+    [  +0.000051] Hash tables configured (established 131072 bind 65536)
+mousedev:
+    [  +0.000178] PS/2 mouse device common for all mice
+loop3:
+    [  +0.024003] detected capacity change from 0 to 337424
+mei_hdcp 0000:00:16.0-b638ab7e-94e2-4ea2-a552-d1c54b627f04:
+    [  +0.003529] bound 0000:00:02.0 (ops i915_hdcp_component_ops [i915])
+usb 2-4:
+    [  +0.000001] Manufacturer: GenesysLogic
+hub 2-4.2:1.0:
+    [  +0.000311] 4 ports detected
+hid-generic 0003:046D:C06A.0003:
+    [  +0.000058] input,hidraw2: USB HID v1.11 Mouse [Logitech USB Optical Mouse] on usb-0000:00:14.0-6.4.4/input0
+usb 1-6.2.4.2:
+    [  +0.000001] SerialNumber: MB-306
+smpboot:
+    [  +0.000143] Estimated ratio of average max frequency by base frequency (times 1024): 1914
+usb-storage 1-6.2.2:1.0:A
+    [  +0.001400] USB Mass Storage device detected
+Modules linked in:
+    [  +0.000025] hid_logitech_hidpp hid_logitech_dj xt_conntrack xt_MASQUERADE nf_conntrack_netlink nfnetlink xfrm_user xfrm_algo xt_addrtype iptable_filter iptable_nat nf_nat nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 libcrc32c bpfilter br_netfilter bridge stp llc vboxnetadp(OE) vboxnetflt(OE) vboxdrv(OE) ccm rtsx_usb_ms rtsx_usb_sdmmc memstick rtsx_usb rfcomm aufs cmac algif_hash algif_skcipher af_alg overlay bnep nls_iso8859_1 uas usb_storage snd_hda_codec_hdmi usbhid snd_hda_codec_realtek snd_hda_codec_generic btusb btrtl btbcm btintel bluetooth uvcvideo videobuf2_vmalloc videobuf2_memops videobuf2_v4l2 videobuf2_common ecdh_generic videodev ecc snd_sof_pci snd_sof_intel_hda_common snd_sof_intel_hda snd_sof_intel_byt snd_sof_intel_ipc snd_sof snd_sof_xtensa_dsp snd_soc_hdac_hda snd_hda_ext_core snd_soc_acpi_intel_match snd_soc_acpi ledtrig_audio snd_hda_intel snd_intel_dspcfg joydev soundwire_intel soundwire_generic_allocation mei_hdcp soundwire_cadence intel_rapl_msr
+usb 1-4:
+    [  +0.000007] SerialNumber: 20100201396000000
+    [  +0.000002] Plug and Play ACPI device, IDs PNP0c02 (active)
+RDX:
+    [  +0.000001] 00007ffec9cedb90 RSI: 00000000c01064ab RDI: 000000000000000d
+hid-generic 0003:046D:C52B.0005:
+    [  +0.059396] input,hidraw2: USB HID v1.11 Keyboard [Logitech USB Receiver] on usb-0000:00:14.0-6.2.4.1/input0
+    [  +0.140483] [sda] Attached SCSI removable disk
+    [  +0.183999] module loaded
+    [  +0.000002]   bridge window [mem 0xb0000000-0xc1ffffff 64bit pref]
+Console:
+    [  +0.000043] switching to colour frame buffer device 240x67
+loop10:
+    [  +0.015205] detected capacity change from 0 to 203424
+    [  +0.000042] SFUN value: 0x21
+    [  +0.000006] 8 comparators, 64-bit 24.000000 MHz counter
+    [  +0.000015] reg 0x10: [mem 0xfe010000-0xfe010fff]
+input:
+    [  +0.001495] HD Pro Webcam C920 as /devices/pci0000:00/0000:00:14.0/usb1/1-6/1-6.2/1-6.2.3/1-6.2.3:1.0/input/input44
+IPv6:
+    [  +0.002676] ADDRCONF(NETDEV_CHANGE): wlo1: link becomes ready
+    [  +0.002443] user-space parallel port driver
+    [  +0.020155] enabling device (0004 -> 0006)
+hid-generic 0003:1B3F:2019.000D:
+    [  +0.056721] input,hidraw4: USB HID v2.01 Device [MUSIC-BOOST USB Microphone] on usb-0000:00:14.0-6.2.4.2/input3
+    [  +0.111258] on minor 4
+FS:
+    [  +0.000002]  00007ff5639a1a40(0000) GS:ffff9ad70dc40000(0000) knlGS:0000000000000000
+loop4:
+    [  +0.023395] detected capacity change from 0 to 113536
+    [  +0.000684] 2/2 memory slots populated (from DMI)
+RSP:
+    [  +0.000002] 002b:00007ffec9cedb58 EFLAGS: 00000246 ORIG_RAX: 0000000000000010
+pci 0000:03:00.0:
+    [  +0.000023] reg 0x10: [mem 0xc4200000-0xc4203fff 64bit]
+workingset:
+    [  +0.000041] timestamp_bits=36 max_order=22 bucket_order=0
+    [  +0.000000]  unlabeled traffic allowed by default
+bridge:
+    [  +0.052333] filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+usb 1-6.2.4.3:
+    [  +2.141768] USB disconnect, device number 22
+hid-generic 0018:27C6:01F4.0001:
+    [  +0.000180] input,hidraw0: I2C HID v1.00 Mouse [GDX1515:00 27C6:01F4] on i2c-GDX1515:00
+    [  +0.000015] EHCI generic platform driver
+RAPL PMU:
+    [  +0.000001] hw unit of domain psys 2^-14 Joules
+usb usb2-port3:
+    [  +4.307851] Cannot enable. Maybe the USB cable is bad?
+    [  +0.000394] 14df34d1a87cf37625abec039ef2bf521249b969'
+VBoxNetAdp:
+    [  +0.006368] Successfully started.
+    [  +0.000001] SerialNumber: 200901010001
+    [  +0.000003] Plug and Play ACPI device, IDs PNP0c02 (active)
+libphy:
+    [  +0.000637] Fixed MDIO Bus: probed
+hid-generic 0003:046D:C52B.0006:
+    [  +0.000111] input,hiddev1,hidraw3: USB HID v1.11 Mouse [Logitech USB Receiver] on usb-0000:00:14.0-6.2.4.1/input1
+traps:
+    [  +0.000005] Chrome_ChildIOT[17754] trap invalid opcode ip:55d9f644c1db sp:7f68b88492e0 error:0 in chrome[55d9efafa000+855f000]
+    [  +0.000010] 12 ports detected
+    [  +0.000198] version 4.0 (2009/01/31) Phillip Lougher
+Write protecting the kernel read-only data:
+    [  +0.027203] 22528k
+    [  +0.028459] i915drmfb (fb0) is primary device
+check:
+    [  +0.000097] Scanning for low memory corruption every 60 seconds
+loop11:
+    [  +0.023137] detected capacity change from 0 to 104360
+    [  +0.000002] switching to inteldrmfb from EFI VGA
+pci_bus 0000:00:
+    [  +0.000001] resource 9 [mem 0xfc800000-0xfe7fffff window]
+RIP:
+    [  +0.000003] 0033:0x7ff563d0150b
+tcp_listen_portaddr_hash hash table entries:
+    [  +0.001488] 8192 (order: 5, 131072 bytes, linear)
+vboxdrv:
+    [  +0.000004] Successfully loaded version 6.1.26_Ubuntu r145957 (interface 0x00300000)
+hid-generic 0003:06C4:C411.0004:ink
+    [  +0.006227] hiddev0,hidraw1: USB HID v1.11 Device [Bizlink D6000 Controller] on usb-0000:00:14.0-6.3.1/input0
+usb:
+    [  +0.000407] port power management may be unreliable
+    [  +0.001877] i8042 KBD port at 0x60,0x64 irq 1
+loop5:
+    [  +0.002641] detected capacity change from 0 to 442968
+hub 2-4:1.0:
+    [  +0.000267] 4 ports detected
+General:
+                   exe="/usr/bin/dbus-daemon" sauid=103 hostname=? addr=? terminal=?'
+CR2:
+    [  +0.000002] 0000561963358550 CR3: 000000010c5b2002 CR4: 00000000003706e0
+    [  +0.000002] Detected ATK, enable event queue
+usb 1-6.2.4.4:
+    [  +0.000002] Manufacturer: Telink
+cryptd:
+    [  +0.005291] max_cpu_qlen set to 1000
+    [  +0.103578] 51800K
+hid-multitouch 0018:27C6:01F4.0001:
+    [  +0.000100] input,hidraw0: I2C HID v1.00 Mouse [GDX1515:00 27C6:01F4] on i2c-GDX1515:00
+usb 1-6:
+    [  +0.000002] Manufacturer: GenesysLogic
+    [  +0.000003] Plug and Play ACPI device, IDs PNP0c02 (active)
+hid-generic 0003:046D:C52B.0007:
+    [  +0.001513] hiddev2,hidraw4: USB HID v1.11 Device [Logitech USB Receiver] on usb-0000:00:14.0-6.2.4.1/input2
+mc:
+    [  +0.004457] Linux media interface: v0.10
+    [  +0.001699] Creating sysfs group for PROC_THERMAL_PCI
+gspca_main:
+    [  +0.855581] v2.14.0 registered
+    [  +0.095674] No architecture policies found
+R10:
+    [  +0.000001] 0000561962dd16e8 R11: 0000000000000246 R12: 0000561962dd16e8
+    [  +0.023663] Checked W+X mappings: passed, no W+X pages found.
+usb 1-6.2:
+    [  +0.000001] Manufacturer: GenesysLogic
+logitech-djreceiver 0003:046D:C52B.0007:Å
+    [  +0.136687] hiddev1,hidraw2: USB HID v1.11 Device [Logitech USB Receiver] on usb-0000:00:14.0-6.2.4.1/input2
+loop12:
+    [  +0.087373] detected capacity change from 0 to 133320
+    [  +0.000003] OHCI PCI platform driver
+    [  +0.000000] Plug and Play ACPI device, IDs ATK3001 PNP030b (active)
+efifb:
+    [  +0.000001] Truecolor: size=8:8:8:8, shift=24:16:8:0
+    [  +0.000000] Ver: 3.0.0
+IP idents hash table entries:
+    [  +0.000144] 262144 (order: 9, 2097152 bytes, linear)
+uvcvideo:
+    [  +0.001227] Found UVC 1.00 device HD Pro Webcam C920 (046d:0892)
+    [  +0.000160] loaded using pool lzo/zbud
+loop6:
+    [  +0.015858] detected capacity change from 0 to 66144
+tsc:
+    [  +0.064004] Refined TSC clocksource calibration: 2304.021 MHz
+iwlwifi 0000:00:14.3
+    [  +0.002897] wlo1: renamed from wlan0
+cdc_ncm 2-4.1:1.5
+    [  +0.001096] enx9cebe8845962: renamed from eth0
+    [  +0.000001] HMAC attrs: 0x1
+systemd-journald[296]:
+    [  +0.004406] Received client request to flush runtime journal.
+Serial:
+    [  +0.000188] 8250/16550 driver, 32 ports, IRQ sharing enabled
+thermal thermal_zone9:
+    [  +0.012899] failed to read out thermal zone (-61)
+    [  +0.000004] Plug and Play ACPI device, IDs PNP0c02 (active)
+    [  +0.000247] Slot [1] registered
+MPTCP token hash table entries:
+    [  +0.000062] 16384 (order: 6, 393216 bytes, linear)
+EXT4-fs (nvme0n1p2):
+    [  +0.003413] re-mounted. Opts: errors=remount-ro. Quota mode: none.
+PCI:
+    [  +0.000463] CLS 64 bytes, default 64
+pcieport 0000:00:1c.4:
+    [  +0.000001] DPC: error containment capabilities: Int Msg #0, RPExt+ PoisonedTLP+ SwTrigger+ RP PIO Log 4, DL_ActiveErr+
+usb 1-6.3:
+    [  +0.000003] Product: USB2.0 Hub
+    [  +0.000012] Aborting method \_SB.IETM._OSC due to previous error (AE_NOT_FOUND) (20201113/psparse-529)
+hub 1-6.3:1.0:
+    [  +0.000475] 4 ports detected
+    [  +0.050766] detected capacity change from 0 to 66168
+    [  +0.000013] 6 ports detected
+intel_pmc_core INT33A1:00:ries driver
+    [  +0.000859]  initialized
+    [  +0.000001] resource 2 [mem 0xb0000000-0xc1ffffff 64bit pref]
+battery:
+    [  +0.006317] new extension: ASUS Battery Extension
+lp:
+    [  +0.000409] driver loaded but no devices found
+    [  +0.000003] Host supports USB 3.1 Enhanced SuperSpeed
+    [  +0.002323]   Magic number: 9:773:97
+loop7:
+    [  +0.000026] detected capacity change from 0 to 448512
+usb usb1:
+    [  +0.000002] SerialNumber: 0000:00:14.0
+snd_hda_intel 0000:00:1f.3:
+    [  +0.000113] bound 0000:00:02.0 (ops i915_audio_component_bind_ops [i915])
+    [  +0.000029] \_SB.IETM._TRT: Return Package has no elements (empty) (20201113/nsprepkg-94)
+    [  +0.007825] [Firmware Bug]: TPM interrupt not working, polling instead
+VFIO - User Level meta-driver version:
+    [  +0.000274] 0.3
+pps_core:
+    [  +0.000000] Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+UDP hash table entries:
+    [  +0.000053] 8192 (order: 6, 262144 bytes, linear)
+CPU:
+    [  +0.000014] 1 PID: 1189 Comm: Xorg Tainted: G           OE     5.11.0-37-generic #41~20.04.2-Ubuntu
+    [  +0.014667] Direct-Access     USB      USB Boot ROM      .   PQ: 0 ANSI: 0 CCS
+logitech-hidpp-device 0003:046D:4051.000C:
+    [  +0.000131] input,hidraw3: USB HID v1.11 Mouse [Logitech M510] on usb-0000:00:14.0-6.2.4.1/input2:1
+ehci_hcd:
+    [  +0.000217] USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+    [  +0.000224] registered platform RTC device (no PNP device found)
+vgaarb:
+    [  +0.000000] loaded
+usb 1-6.3.1:
+    [  +0.000003] SerialNumber: 2053345C5534
+RAX:
+    [  +0.000002] ffffffffffffffda RBX: 00007ffec9cedb90 RCX: 00007ff563d0150b
+fuse:
+    [  +0.000085] init (API version 7.33)
+usb 1-6.4:
+    [  +0.000004] Product: USB2.0 Hub
+    [  +0.000001] Found RAPL domain psys
+i2c_hid i2c-GDX1515:00:
+    [  +0.000025] supply vddl not found, using dummy regulator
+loop14:
+    [  +0.007710] detected capacity change from 0 to 133552
+    [  +0.000129] Using software bounce buffering for IO (SWIOTLB)
+pci_bus 0000:03:
+    [  +0.000001] resource 1 [mem 0xc4200000-0xc42fffff]
+thermal LNXTHERM:00:
+    [  +0.001535] registered as thermal_zone0
+evdi evdi.0:
+    [  +0.000006] [drm] Cannot find any crtc or sizes
+with arguments:
+    [  +0.000002]
+clocksource:
+    [  +0.000053] Switched to clocksource tsc
+CS:
+    [  +0.000001]  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+    [  +0.000872] detected capacity change from 0 to 140208
+    [  +0.000000] EISA: Detected 0 cards
+usb usb2:
+    [  +0.000001] SerialNumber: 0000:00:14.0
+UDP-Lite hash table entries:
+    [  +0.000039] 8192 (order: 6, 262144 bytes, linear)
+    [  +0.001221] registered new interface driver vc032x
+hid-generic 0003:046D:4051.000C:
+    [  +0.000180] input,hidraw3: USB HID v1.11 Mouse [Logitech Wireless Device PID:4051] on usb-0000:00:14.0-6.2.4.1/input2:1
+    [  +0.000252] input,hidraw5: USB HID v1.11 Mouse [Logitech USB Optical Mouse] on usb-0000:00:14.0-6.4.4/input0
+hid-generic 0003:248A:8367.000A:
+    [  +0.000205] input,hidraw7: USB HID v1.11 Mouse [Telink Wireless Receiver] on usb-0000:00:14.0-6.2.4.4/input0
+    [  +0.000001]
+usbhid:
+    [  +0.000002] USB HID core driver
+    [  +0.000930] HWP enabled
+pci 0000:00:1f.0:
+    [  +0.000256] [8086:0284] type 00 class 0x060100
+WARNING:
+    [  +0.000065] CPU: 1 PID: 1189 at drivers/gpu/drm/drm_atomic_helper.c:1106 drm_atomic_helper_commit_modeset_disables+0x46b/0x480 [drm_kms_helper]
+perf:
+    [  +0.288631] interrupt took too long (4118 > 4041), lowering kernel.perf_event_max_sample_rate to 48500
+    [  +0.000268] Found Intel integrated DMA 64-bit
+Adding 2097148k swap on /swapfile.  Priority:-2
+    [  +0.000039] extents:6 across:2260988k SSFS
+R13:
+    [  +0.000001] 000000000000000d R14: 0000561962c0a740 R15: 0000561963007d60
+    [  +0.000498] 2688K
+Code:
+    [  +0.000001] 0f 1e fa 48 8b 05 85 39 0d 00 64 c7 00 26 00 00 00 48 c7 c0 ff ff ff ff c3 66 0f 1f 44 00 00 f3 0f 1e fa b8 10 00 00 00 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 8b 0d 55 39 0d 00 f7 d8 64 89 01 48
+    [  +0.000079] Limiting TX power to 30 (30 - 0) dBm as advertised by 78:d7:52:dc:a0:60
+software IO TLB:
+    [  +0.000001] mapped [mem 0x000000008d960000-0x0000000091960000] (64MB)
+loop15:
+    [  +3.815316] detected capacity change from 0 to 66368
+usb 1-6.2.2:
+    [  +3.962196] USB disconnect, device number 16
+Call Trace:
+    [  +0.000001]
+    [  +0.000004] [drm] Cannot find any crtc or sizes
+pci 0000:00:1d.0:
+    [  +0.000003]   bridge window [mem 0xc4200000-0xc42fffff]
+loop9:
+    [  +0.013908] detected capacity change from 0 to 331880
+snd_hda_codec_realtek hdaudioC0D0:
+    [  +0.000002]      Internal Mic=0x12
+bpfilter:
+    [  +0.005069] Loaded bpfilter_umh pid 2238
+    [  +0.000335] Local APIC timer is reliable in all C-states
+    [  +0.000000] Plug and Play ACPI device, IDs PNP0c02 (active)
+pci 0000:00:1c.0:
+    [  +0.000053] PCI bridge to [bus 01]
+hid-generic 0003:248A:8367.000B:
+    [  +0.024039] input,hidraw8: USB HID v1.11 Keyboard [Telink Wireless Receiver] on usb-0000:00:14.0-6.2.4.4/input1
+pstore:
+    [  +0.000010] Registered efi as persistent store backend
+audit:
+    [  +0.000095] type=1400 audit(1634085279.619:67): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.snap-store.ubuntu-software" pid=21146 comm="apparmor_parser"
+ACPI:
+    [  +0.000115] Video Device [PEGP] (multi-head: no  rom: yes  post: no)
+rtc_cmos rtc_cmos:
+    [  +0.000011] alarms up to one month, y3k, 114 bytes nvram
+Freeing unused kernel image (rodata/data gap) memory:
+    [  +0.000285] 684K
+idma64 idma64.1:
+    [  +0.000349] Found Intel integrated DMA 64-bit
+mei_me 0000:00:16.0:
+    [  +0.000387] enabling device (0000 -> 0002)
+usb 2-4.1:
+    [  +0.000004] [7] FU [Dell USB Audio Playback Volume] ch = 6, val = -10752/0/16
+loop16:
+    [  +1.175694] detected capacity change from 0 to 8
+loop0:
+    [  +0.003178] detected capacity change from 0 to 426848
+usb 1-6.2.3:
+    [  +0.000002] SerialNumber: 73AFE4EF
+evdi evdi.2:
+    [  +0.000003] [drm] Cannot find any crtc or sizes
+Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing:A
+    [  +0.000392] 88f752e560a1e0737e31163a466ad7b70a850c19'
+shpchp:
+    [  +0.000075] Standard Hot Plug PCI Controller Driver version: 0.4
+Freeing unused kernel image (text/rodata gap) memory:
+    [  +0.000878] 2036K
+    [  +0.000148] 65536 (order: 8, 1048576 bytes, linear)
+system 00:01:
+    [  +0.000000] Plug and Play ACPI device, IDs PNP0c02 (active)
+scsi host0:
+    [  +0.000222] usb-storage 1-6.2.2:1.0
+    [  +0.000064] 4 ports detected
+IPI shorthand broadcast:!
+    [  +0.000004] enabled
+usb 1-6.4.4:
+    [  +0.000002] Manufacturer: Logitech
+    [  +0.011587] 8/0/0 default/read/poll queues
+ledtrig-cpu:
+    [  +0.000041] registered to indicate activity on CPUs
+usb 1-10:
+    [  +0.000005] New USB device strings: Mfr=0, Product=0, SerialNumber=0
+pci 0000:00:02.0:
+    [  +0.000155] Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+acpi PNP0C14:03:
+    [  +0.059155] duplicate WMI GUID 05901221-D566-11D1-B2F0-00A0C9062910 (first instance was on PNP0C14:02)
+device-mapper:
+    [  +0.000076] ioctl: 4.43.0-ioctl (2020-10-01) initialised: dm-devel@redhat.com
+ohci_hcd:
+    [  +0.000018] USB 1.1 'Open' Host Controller (OHCI) Driver
+    [  +0.000761] loaded
+usb 2-4.2:
+    [  +0.000003] Manufacturer: GenesysLogic
+evdi:
+    [  +0.000002] [D] evdi_painter_get_edid_copy:242 (dev=0) EDID valid
+    [  +0.001461] 2036K
+    [  +0.000010] Marking stable (714416159, 778605)->(723501503, -8306739)
+loop1:
+    [  +0.020221] detected capacity change from 0 to 8
+usb 1-6.2.4:
+    [  +0.000002] Product: USB2.0 HUB
+Bluetooth:
+    [  +0.000005] RFCOMM ver 1.11
+    [  +0.000028] [drm] fb0: i915drmfb frame buffer device
+    [  +0.000002] [drm] Cannot find any crtc or sizes
+    [  +0.000000] Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+pnp:
+    [  +0.000214] PnP ACPI: found 8 devices
+Hardware name:
+    [  +0.000003] ASUSTeK COMPUTER INC. ZenBook UX334FLC_UX334FL/UX334FLC, BIOS UX334FLC.306 05/12/2020
+    [  +0.027218] base HW address: 3c:58:c2:bc:d7:ca
+i801_smbus 0000:00:1f.4:!
+    [  +0.000212] SPD Write Disable is set
+intel_pch_thermal 0000:00:12.0:rewave
+    [  +0.005825] enabling device (0000 -> 0002)
+    [  +0.000067] raw HID events driver (C) Jiri Kosina
+    [  +0.000065] Initializing network drop monitor service
+integrity:
+    [  +0.000128] Loaded X.509 cert 'Canonical Ltd. Master Certificate Authority: ad91990bc22ab1f517048c23b6655a268e345a63'
+RBP:
+    [  +0.000001] 00000000c01064ab R08: 0000561962dd16e8 R09: 0000000000000000
+    [  +0.020087] Linux video capture interface: v2.00
+    [  +0.000000] Plug and Play ACPI device, IDs INT3f0d PNP0c02 (active)
+hub 1-6.4:1.0:
+    [  +0.000281] 4 ports detected
+    [  +0.000009] USB Universal Host Controller Interface driver
+systemd[1]:
+    [  +0.002834] Started Journal Service.
+hid-generic 0003:06C4:C411.0002:ink
+    [  +0.035519] hiddev0,hidraw1: USB HID v1.11 Device [Bizlink D6000 Controller] on usb-0000:00:14.0-6.3.1/input0
+tun:
+    [  +0.000003] Universal TUN/TAP device driver, 1.6
+ACPI BIOS Error (bug):
+    [  +0.027910] Could not resolve symbol [\DPPP], AE_NOT_FOUND (20201113/psargs-330)
+kauditd_printk_skb:
+    [  +0.195372] 36 callbacks suppressed
+    [  +0.000014] BAR 0: assigned [mem 0xc4324000-0xc4324fff 64bit]
+show_signal:
+    [  +2.029563] 123 callbacks suppressed
+    [  +0.000206] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+    [  +0.000009] OHCI generic platform driver
