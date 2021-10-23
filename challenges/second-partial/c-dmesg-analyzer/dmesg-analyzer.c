@@ -10,7 +10,7 @@
 
 #define REPORT_FILE "_report.txt"
 
-#define HASHSIZE 301
+#define HASHSIZE 401
 
 //Hash table implementation
 struct nlist{
@@ -42,24 +42,39 @@ struct nlist* lookup(char *s){
     return NULL;
 }
 
-int dm=0;
 struct nlist* add(char* key, char* val){
+
     struct nlist* np;
     unsigned hashval;
 
     if( (np=lookup(key) )==NULL){
-        dm++;
         np = (struct nlist* ) malloc(sizeof(*np));
         if(np == NULL || (np->key = strdup(key))==NULL) return NULL;
 
         hashval= hash(key);
-        np->next=hashtab[hash(key)];
+        np->next=hashtab[hashval];
         hashtab[hashval]=np;
     }else{
-        free((void*) np->val);
+        // printf("here\n");
     }
-    if((np->val=strdup(val))==NULL) return NULL;
 
+    if(!np->val){
+        np->val = (char*) malloc(strlen(val)*sizeof(char)+6);
+        strcpy(np->val, "    ");
+        strcat(np->val, val);
+        strcat(np->val, "\n");
+    }else{
+        if(strstr(np->val, val)!=NULL) return np;
+
+        char* tmp = (char*) malloc(strlen(np->val)*sizeof(char)+1);
+        strcpy(tmp, np->val);
+        np->val = (char*) malloc( (strlen(tmp) + strlen(val)) * sizeof(char) + 6);
+        strcpy(np->val, tmp);
+        strcat(np->val, "    ");
+        strcat(np->val, val);
+        strcat(np->val,"\n");
+    }
+    
     return np;
 }
 
@@ -175,7 +190,7 @@ void analizeLog(char *logFile, char *report) {
         if(buff=='\n') newLine=1;
     } while (bytes_read>0);
 
-    printf("Analyzing: %d lines\n",file_len);
+    // printf("Analyzing: %d lines\n",file_len);
     lseek(file,0,SEEK_SET);
     int line_length = 0;
     do{
@@ -202,23 +217,17 @@ void analizeLog(char *logFile, char *report) {
     FILE* output = fopen(report, "w+");
     struct nlist* head;
 
-
-    int am=0;
     for (int i=0; i<=HASHSIZE; i++) {
         head=hashtab[i];
         if(head==NULL) continue;
-        am++;
-        fputs(head->key, output);
-        fputs("\n", output);
         struct nlist* curr;
         for (curr=head; curr!=NULL; curr=curr->next) {
-            fputs("    ", output);
-            fputs(curr->val, output);
+            fputs(curr->key, output);
             fputs("\n", output);
+            fputs(curr->val, output);
         }   
     }
     fclose(output);
-    printf("%d vs %d\n",dm,am);//Hoe many keys are bveing lost
 
     printf("Report is generated at: [%s]\n", report);
 }
