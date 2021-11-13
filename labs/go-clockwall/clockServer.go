@@ -16,8 +16,7 @@ func handleConn(c net.Conn, tz string) {
 
 	loc, err := time.LoadLocation(tz)
 	if err != nil {
-		println(tz, "ERROR: Time zone unknown")
-		c.Close()
+		log.Fatal("ERROR: Time zone unkwnown: " + tz)
 		return
 	}
 
@@ -35,11 +34,11 @@ func main() {
 	flag.Parse()
 	var TZ = os.Getenv("TZ")
 	if TZ == "" {
-		println("ERROR: No env variable TZ provided")
+		log.Fatal("ERROR: No env variable TZ provided")
 		return
 	}
 	listener, err := net.Listen("tcp", "localhost:"+strconv.Itoa(*port))
-	println("Server up in", "localhost:", *port, "With time zone:", TZ)
+	println("Server up in", "localhost:", *port, "| With time zone:", TZ)
 	if err != nil {
 		log.Fatal(err)
 	}
