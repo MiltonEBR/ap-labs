@@ -3,6 +3,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"io"
 	"log"
 	"net"
@@ -22,7 +23,7 @@ func handleConn(c net.Conn, tz string) {
 
 	for {
 
-		if _, err := io.WriteString(c, time.Now().In(loc).Format("15:04:05\n")); err != nil {
+		if _, err := io.WriteString(c, time.Now().In(loc).Format("15:04:05")+","+tz); err != nil {
 			return // e.g., client disconnected
 		}
 		time.Sleep(1 * time.Second)
@@ -38,7 +39,7 @@ func main() {
 		return
 	}
 	listener, err := net.Listen("tcp", "localhost:"+strconv.Itoa(*port))
-	println("Server up in", "localhost:", *port, "| With time zone:", TZ)
+	fmt.Println("Server up in", "localhost:", *port, "| With time zone:", TZ)
 	if err != nil {
 		log.Fatal(err)
 	}
