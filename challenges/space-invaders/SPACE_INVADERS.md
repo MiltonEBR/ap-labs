@@ -1,5 +1,7 @@
 # Space invaders
 
+>Note: Gitpod won't let us make submit because we don't have access to a GUI and make on Gitpod crashes, please go to the Makefile and uncomment #-include lab.mk
+
 ## Demo video
 <https://youtu.be/dDnbNAS5r8I>
 
